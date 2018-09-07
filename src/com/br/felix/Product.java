@@ -9,7 +9,23 @@ public class Product {
      * Display a full description of the product
      */
     public void look() {
+        System.out.println(String.format(name + " : " + price + "%n" + description));
+    }
 
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public String getName() {
+        return name;
     }
 
     /**
