@@ -16,4 +16,8 @@ public class RelayDelivery implements Delivery {
         else
             return 4.99;
     }
+    @Override
+    public String getInfo(){
+        return "RelayDelivery";
+    }
 }

@@ -1,5 +1,6 @@
 package com.br.felix;
 
 public interface Delivery {
-    public double getPrice();
+    double getPrice();
+    String getInfo();
 }
