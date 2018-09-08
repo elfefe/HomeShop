@@ -4,83 +4,27 @@ import java.util.Collection;
 import java.util.Map;
 import java.util.Set;
 
+import java.util.HashMap;
+
 public class Bill {
-    private Customer customer;
-    private Map<Product, Integer> product = new Map<>() {
-        @Override
-        public int size() {
-            return 0;
-        }
+    private Client client;
+    private Map<Product, Integer> products = new HashMap<Product, Integer>();
+    private Delivery delivery;
 
-        @Override
-        public boolean isEmpty() {
-            return false;
-        }
-
-        @Override
-        public boolean containsKey(Object key) {
-            return false;
-        }
-
-        @Override
-        public boolean containsValue(Object value) {
-            return false;
-        }
-
-        @Override
-        public Integer get(Object key) {
-            return null;
-        }
-
-        @Override
-        public Integer put(Product key, Integer value) {
-            return null;
-        }
-
-        @Override
-        public Integer remove(Object key) {
-            return null;
-        }
-
-        @Override
-        public void putAll(Map<? extends Product, ? extends Integer> m) {
-
-        }
-
-        @Override
-        public void clear() {
-
-        }
-
-        @Override
-        public Set<Product> keySet() {
-            return null;
-        }
-
-        @Override
-        public Collection<Integer> values() {
-            return null;
-        }
-
-        @Override
-        public Set<Entry<Product, Integer>> entrySet() {
-            return null;
-        }
-    };
-
-    public Bill(Customer customer){
-        this.customer = customer;
+    public Bill(Client client, Delivery delivery) {
+        this.client = client;
+        this.delivery = delivery;
     }
 
-    public void addProduct(Product product, Integer quantity){
-        this.product.put(product,quantity);
+    public void addProduct(Product product, int quantity) {
+        this.products.put(product, quantity);
     }
 
-    public Customer getCustomer() {
-        return customer;
+    public Client getClient() {
+        return client;
     }
 
-    public Map<Product, Integer> getProduct() {
-        return product;
+    public Map<Product, Integer> getProducts() {
+        return products;
     }
 }
